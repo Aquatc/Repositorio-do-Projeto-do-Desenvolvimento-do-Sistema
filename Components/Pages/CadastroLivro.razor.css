@@ -1,5 +1,81 @@
-﻿<h3>CadastroLivro.razor</h3>
-
-@code {
-
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #d9ccc2;
 }
+
+.container {
+    width: 90%;
+    margin: 30px auto;
+    background: #e3d6cc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario {
+    width: 40%;
+}
+
+    .formulario input,
+    .formulario textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 2px solid #6c63ff;
+        border-radius: 8px;
+    }
+
+    .formulario textarea {
+        height: 100px;
+    }
+
+.imagens {
+    width: 50%;
+    text-align: center;
+}
+
+.box-img {
+    display: flex;
+    width: 180px;
+    height: 250px;
+    background: #5c2c1e;
+    color: white;
+    border-radius: 8px;
+    margin: 10px auto;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.label-img {
+    font-weight: bold;
+}
+
+.botoes {
+    margin-top: 20px;
+}
+
+button {
+    width: 250px;
+    padding: 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    background: #c9c9c9;
+}
+
+    button:hover {
+        background: #b5b5b5;
+    }

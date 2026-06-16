@@ -1,5 +1,66 @@
-﻿<h3>CadastroLivro</h3>
+﻿@page "/cadastro-livro"
 
-@code {
-
+@{
+    ViewData["Title"] = "Cadastro de Livro";
 }
+
+<link rel="stylesheet" href="~/css/cadastro.css" />
+
+<div class="container">
+    <h1>Cadastre o Livro</h1>
+
+    <div class="content">
+
+        <!-- FORMULÁRIO -->
+        <div class="formulario">
+            <input asp-for="Livro.Id" placeholder="ID do livro" />
+
+            <input asp-for="Livro.Titulo" placeholder="Título" />
+
+            <input asp-for="Livro.Autor" placeholder="Autor" />
+
+            <input asp-for="Livro.Editora" placeholder="Editora" />
+
+            <input asp-for="Livro.DataPublicacao" type="date" />
+
+            <input asp-for="Livro.ISBN" placeholder="ISBN" />
+
+            <input asp-for="Livro.Genero" placeholder="Gênero" />
+
+            <input asp-for="Livro.Categoria" placeholder="Categoria" />
+
+            <input asp-for="Livro.Idioma" placeholder="Idioma" />
+
+            <input asp-for="Livro.NumeroPaginas" type="number" placeholder="Número de páginas" />
+
+            <textarea asp-for="Livro.Resumo" placeholder="Resumo"></textarea>
+        </div>
+
+        <!-- IMAGENS -->
+        <div class="imagens">
+
+            <div>
+                <label class="box-img">
+                    <input type="file" hidden />
+                    Insira a Imagem
+                </label>
+                <div class="label-img">Capa</div>
+            </div>
+
+            <div>
+                <label class="box-img">
+                    <input type="file" hidden />
+                    Insira a Imagem
+                </label>
+                <div class="label-img">Contra Capa</div>
+            </div>
+
+            <div class="botoes">
+                <button type="submit">Confirmar</button>
+                <button type="reset">Cancelar</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>

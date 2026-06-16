@@ -1,0 +1,6 @@
+C:\Users\2024102020074\Documents\GitHub\Repositorio-Figma-dos-resenhadores\obj\Debug\net8.0\Bibloteca.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\2024102020074\Documents\GitHub\Repositorio-Figma-dos-resenhadores\obj\Debug\net8.0\Bibloteca.AssemblyInfoInputs.cache
+C:\Users\2024102020074\Documents\GitHub\Repositorio-Figma-dos-resenhadores\obj\Debug\net8.0\Bibloteca.AssemblyInfo.cs
+C:\Users\2024102020074\Documents\GitHub\Repositorio-Figma-dos-resenhadores\obj\Debug\net8.0\Bibloteca.csproj.CoreCompileInputs.cache
+C:\Users\2024102020074\Documents\GitHub\Repositorio-Figma-dos-resenhadores\obj\Debug\net8.0\Bibloteca.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\2024102020074\Documents\GitHub\Repositorio-Figma-dos-resenhadores\obj\Debug\net8.0\Bibloteca.sourcelink.json
