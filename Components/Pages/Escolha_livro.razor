@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Empréstimo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Cadastro de Empréstimos</h1>
+
+        <label>ID do Aluno</label>
+        <input type="number" placeholder="ID">
+
+        <label>Nome do Aluno</label>
+        <input type="text" placeholder="Nome">
+
+        <label>Turma</label>
+        <input type="text" placeholder="Turma">
+
+        <label>Pesquisar Livro</label>
+        <input type="text" id="pesquisa" placeholder="Digite o nome do livro..." onkeyup="buscarLivro()">
+
+        <label>Livros Disponíveis</label>
+
+        <div id="listaLivros">
+            <div class="livro" onclick="selecionarLivro('Dom Casmurro')">Dom Casmurro</div>
+            <div class="livro" onclick="selecionarLivro('O Pequeno Príncipe')">O Pequeno Príncipe</div>
+            <div class="livro" onclick="selecionarLivro('Harry Potter')">Harry Potter</div>
+            <div class="livro" onclick="selecionarLivro('Senhor dos Anéis')">Senhor dos Anéis</div>
+            <div class="livro" onclick="selecionarLivro('Percy Jackson')">Percy Jackson</div>
+        </div>
+
+        <label>Livro Selecionado</label>
+        <input type="text" id="selecionado" readonly placeholder="Nenhum livro selecionado">
+
+        <button>Registrar Empréstimo</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
