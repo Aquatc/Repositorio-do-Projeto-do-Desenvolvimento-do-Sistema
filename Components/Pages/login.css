@@ -1,0 +1,42 @@
+body{
+    background: rgb(19, 42, 28);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form{
+    width: 300px;
+    box-shadow: 50cm;
+    
+}
+
+input, button{
+    padding: 10px;
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+}
+button{
+    cursor: pointer;
+}
+button:active{
+    background: rgb(19, 10, 10);
+    color:white;
+}
+
+.clear{
+    background: wheat;
+    border: none;
+}
+
+.solid{
+    background: white;
+    border: none;
+}
+
+.outline{
+    background: transparent;
+    color: white;
+    border-color: white;
+}

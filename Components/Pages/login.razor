@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <form>
+        <div><label>Email</label></div>
+        <div>
+            <input type="email" name="email" id="email" onchange="validateFields()" placeholder="Seu@gmail.com">
+        </div>
+        <div>
+            <label>Senha</label>
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="Senha">
+        </div>
+        <div>
+            <button type="button" class="solid" disabled="true">Entrar</button>
+        </div>
+        <div>
+            <button type="button" class="outline">Registrar</button>
+        </div>
+        <div>
+            <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar senha</button>
+        </div>
+    </form>
+</body>
+
+
+
+</html>
