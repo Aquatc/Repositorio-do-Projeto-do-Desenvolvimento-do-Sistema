@@ -1,4 +1,4 @@
-.login-box {
+.recp-box {
 
     width: 300px;
 
@@ -17,7 +17,7 @@
 
 
 label {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 
@@ -52,22 +52,4 @@ button {
     color:white;
 
     border:none;
-}
-
-
-.outline {
-
-    background: transparent;
-
-    border:1px solid rgb(19,42,28);
-
-}
-
-
-.clear {
-
-    background: transparent;
-    color:blue;
-    border:none;
-
 }
