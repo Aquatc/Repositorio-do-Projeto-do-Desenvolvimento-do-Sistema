@@ -1,0 +1,48 @@
+﻿<h3>PageInicial</h3>
+
+@page "/"
+@inject NavigationManager Navigation
+
+<PageTitle>Início - Sistema de Biblioteca</PageTitle>
+
+<div class="container">
+    <!-- Hero Section / Boas-vindas -->
+    <header class="hero-section">
+        <h1>Bem-vindo ao Sistema de Biblioteca</h1>
+        <p>Organize, catalogue e gerencie o seu acervo de livros de forma simples, moderna e rápida.</p>
+        <button class="cta-btn" @onclick="AcessarCatalogo">Acessar Catálogo de Livros</button>
+    </header>
+
+    <!-- Cards de Informações Simples (Dashboard) -->
+    <section class="dashboard-grid">
+        <div class="stat-card">
+            <div class="stat-icon">📚</div>
+            <h3>Total de Livros</h3>
+            <p class="stat-number">1,240</p>
+            <p class="stat-desc">Livros cadastrados no acervo</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">👤</div>
+            <h3>Leitores Ativos</h3>
+            <p class="stat-number">85</p>
+            <p class="stat-desc">Usuários com cadastro regular</p>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🔄</div>
+            <h3>Empréstimos</h3>
+            <p class="stat-number">12</p>
+            <p class="stat-desc">Livros pendentes de devolução</p>
+        </div>
+    </section>
+</div>
+
+@code {
+    // Função para navegar até a página do catálogo que criamos antes
+    private void AcessarCatalogo()
+    {
+        Navigation.NavigateTo("biblioteca");
+    }
+}
+

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Content Include="Components\Pages\CadastroLivro.razor.css" />
+    <Content Include="Components\Pages\PageInicial.razor.css" />
   </ItemGroup>
 
 </Project>
