@@ -1,26 +1,26 @@
-@page "/CadastroFuncionario"
+@page "/CadastroCliente"
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro dos Funcionários</title>
+    <title>Cadastro dos Clientes</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Cadastro dos Funcionários</h1>
+    <h1>Cadastro dos Clientes</h1>
 
     <div class="form-container">
 
         <div class="form-group">
-            <label for="id">Informe ID do Funcionário</label>
+            <label for="id">Informe ID do Cliente se Ouver</label>
             <input type="text" id="id" placeholder="ID">
         </div>
 
         <div class="form-group">
-            <label for="cpf">Informe o CPF do funcionário</label>
+            <label for="cpf">Informe o CPF do Cliente</label>
             <input type="text" id="cpf" placeholder="CPF">
         </div>
 
@@ -69,7 +69,10 @@
             <input type="text" id="setor" placeholder="Setor">
         </div>
 
-        <button type="submit">Cadastrar</button>
+        <a href="/escolha-livro">
+            <button type="submit">Cadastrar</button>
+        </a>
+        
 
     </div>
 
