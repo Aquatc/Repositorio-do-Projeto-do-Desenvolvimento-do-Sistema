@@ -1,0 +1,328 @@
+﻿@page "/paginaInicial"
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estante Azul — Biblioteca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <span class="logo">Estante Azul</span>
+
+    <form class="searchbar" onsubmit="return false;">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+        <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <input type="text" placeholder="Buscar título ou autor...">
+    </form>
+  </header>
+
+  <main class="container">
+
+    <h2 class="group-title">Livros</h2>
+    <div class="grid">
+
+      <article class="book">
+        <div class="cover cover--a">
+          <div class="badges">
+            <span class="date">17.07 SEX</span>
+            <span class="new">NOVO</span>
+          </div>
+          <span class="letter">C</span>
+        </div>
+        <h3>Capitães da Areia</h3>
+        <p class="sub">Jorge Amado</p>
+        <p class="stat">#001 · <span class="ok">Disponível</span></p>
+      </article>
+
+      <article class="book">
+        <div class="cover cover--b">
+          <div class="badges">
+            <span class="date">15.07 QUA</span>
+          </div>
+          <span class="letter">R</span>
+        </div>
+        <h3>A Revolução dos Bichos</h3>
+        <p class="sub">George Orwell</p>
+        <p class="stat">#002 · <span class="ok">Disponível</span></p>
+      </article>
+
+    </div>
+
+    <h2 class="group-title">Mangás</h2>
+    <div class="grid">
+
+      <article class="book">
+        <div class="cover cover--c">
+          <div class="badges">
+            <span class="date">17.07 SEX</span>
+            <span class="new">NOVO</span>
+          </div>
+          <span class="letter">祐</span>
+        </div>
+        <h3>Sono Bisque Doll wa Koi wo Suru</h3>
+        <p class="sub">Shinichi Fukuda</p>
+        <p class="stat">#003 · <span class="ok">Disponível</span></p>
+      </article>
+
+      <article class="book">
+        <div class="cover cover--d">
+          <div class="badges">
+            <span class="date">16.07 QUI</span>
+          </div>
+          <span class="letter">薬</span>
+        </div>
+        <h3>Diários de uma Apotecária</h3>
+        <p class="sub">Natsu Hyuuga</p>
+        <p class="stat">#004 · <span class="res">Reservado</span></p>
+      </article>
+
+      <article class="book">
+        <div class="cover cover--e">
+          <div class="badges">
+            <span class="date">14.07 TER</span>
+          </div>
+          <span class="letter">天</span>
+        </div>
+        <h3>Tengoku Daimakyou</h3>
+        <p class="sub">Masakazu Ishiguro</p>
+        <p class="stat">#005 · <span class="ok">Disponível</span></p>
+      </article>
+
+      <article class="book">
+        <div class="cover cover--f">
+          <div class="badges">
+            <span class="date">12.07 DOM</span>
+          </div>
+          <span class="letter">悟</span>
+        </div>
+        <h3>Dragon Ball Z</h3>
+        <p class="sub">Akira Toriyama</p>
+        <p class="stat">#006 · <span class="ok">Disponível</span></p>
+      </article>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">Estante Azul · Projeto de Biblioteca</footer>
+
+</body>
+</html>
+
+<style>
+
+    :root {
+        --azul: #2E6FE0;
+        --azul-escuro: #1B3A6B;
+        --fundo: #0B0F18;
+        --card-texto: #F5F8FF;
+        --cinza: rgba(255,255,255,0.45);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background: var(--fundo);
+        color: var(--card-texto);
+        font-family: 'Work Sans', Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 24px 60px;
+    }
+
+    /* Topo */
+    .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 22px 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--card-texto);
+    }
+
+    .searchbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #171F30;
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 999px;
+        padding: 8px 16px;
+        width: 100%;
+        max-width: 360px;
+    }
+
+        .searchbar svg {
+            width: 16px;
+            height: 16px;
+            color: var(--cinza);
+            flex-shrink: 0;
+        }
+
+        .searchbar input {
+            border: none;
+            background: transparent;
+            color: var(--card-texto);
+            font-family: inherit;
+            font-size: 0.9rem;
+            width: 100%;
+        }
+
+            .searchbar input::placeholder {
+                color: var(--cinza);
+            }
+
+            .searchbar input:focus {
+                outline: none;
+            }
+
+    /* Títulos de grupo */
+    .group-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 40px 0 18px;
+        padding-left: 12px;
+        border-left: 4px solid var(--azul);
+    }
+
+    /* Grade de blocos */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px 16px;
+    }
+
+    .book {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cover {
+        position: relative;
+        aspect-ratio: 3 / 4;
+        border-radius: 6px;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: transform .15s ease;
+    }
+
+    .book:hover .cover {
+        transform: translateY(-4px);
+    }
+
+    .cover--a {
+        background: linear-gradient(160deg, #143866, #2A5D9E);
+    }
+
+    .cover--b {
+        background: linear-gradient(160deg, #0F2A4D, #1E4E8C);
+    }
+
+    .cover--c {
+        background: linear-gradient(160deg, #2E5A9C, #6FA3E0);
+    }
+
+    .cover--d {
+        background: linear-gradient(160deg, #1B3A6B, #4A7FC1);
+    }
+
+    .cover--e {
+        background: linear-gradient(160deg, #0E1F3A, #2E5A9C);
+    }
+
+    .cover--f {
+        background: linear-gradient(160deg, #163A6E, #3E71B3);
+    }
+
+    .badges {
+        display: flex;
+        gap: 5px;
+    }
+
+    .date {
+        background: rgba(0,0,0,0.45);
+        padding: 3px 7px;
+        border-radius: 4px;
+        font-size: 0.62rem;
+        font-weight: 600;
+    }
+
+    .new {
+        background: #E8622C;
+        padding: 3px 7px;
+        border-radius: 4px;
+        font-size: 0.62rem;
+        font-weight: 700;
+    }
+
+    .letter {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: rgba(255,255,255,0.28);
+    }
+
+    .book h3 {
+        font-size: 0.85rem;
+        margin: 10px 0 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .book .sub {
+        font-size: 0.72rem;
+        color: var(--cinza);
+        margin: 0;
+    }
+
+    .book .stat {
+        font-size: 0.72rem;
+        color: var(--cinza);
+        margin: 4px 0 0;
+    }
+
+    .ok {
+        color: #6FCF7E;
+        font-weight: 600;
+    }
+
+    .res {
+        color: #F0A860;
+        font-weight: 600;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.8rem;
+        color: var(--cinza);
+        border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+</style>
