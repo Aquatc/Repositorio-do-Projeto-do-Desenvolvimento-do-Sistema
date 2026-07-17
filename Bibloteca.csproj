@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="Components\Pages\PaginaInicial.razor.css" />
+  </ItemGroup>
+
 </Project>
