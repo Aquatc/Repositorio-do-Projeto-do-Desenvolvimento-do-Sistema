@@ -1,0 +1,110 @@
+﻿@page "/cadastro-livro"
+
+<link rel="stylesheet" href="~/css/cadastro.css" />
+
+<div class="container">
+    <h1>Cadastre o Livro</h1>
+
+    
+    <form method="post" enctype="multipart/form-data">
+        <div class="content">
+
+        
+            <div class="formulario">
+                <input asp-for="Livro.Id" placeholder="ID do livro" />
+
+                <input asp-for="Livro.Titulo" placeholder="Título" />
+
+                <input asp-for="Livro.Autor" placeholder="Autor" />
+
+                <input asp-for="Livro.Editora" placeholder="Editora" />
+
+                <input asp-for="Livro.DataPublicacao" type="date" />
+
+                <input asp-for="Livro.ISBN" placeholder="ISBN" />
+
+                <input asp-for="Livro.Genero" placeholder="Gênero" />
+
+                <input asp-for="Livro.Categoria" placeholder="Categoria" />
+
+                <input asp-for="Livro.Idioma" placeholder="Idioma" />
+
+                <input asp-for="Livro.NumeroPaginas" type="number" placeholder="Número de páginas" />
+
+                <textarea asp-for="Livro.Resumo" placeholder="Resumo"></textarea>
+            </div>
+
+        
+            <div class="imagens">
+
+                <div>
+                    <label for="capa" class="box-img">
+                        <input type="file" id="capa" hidden onchange="previewImagem(event, 'previewCapa', 'textoCapa')" />
+
+                        <span id="textoCapa">Insira a Imagem</span>
+                        <img id="previewCapa" style="max-width: 100%; max-height: 100%;" />
+                    </label>
+
+                    <div class="label-img">Capa</div>
+                </div>
+
+                <div>
+                    <label for="contraCapa" class="box-img">
+                        <input type="file" id="contraCapa" hidden onchange="previewImagem(event, 'previewContraCapa', 'textoContra')" />
+
+                        <span id="textoContra">Insira a Imagem</span>
+                        <img id="previewContraCapa" style="max-width: 100%; max-height: 100%;" />
+                    </label>
+
+                    <div class="label-img">Contra Capa</div>
+                </div>
+
+                <div class="botoes">
+                    <button type="submit">Confirmar</button>
+                    <button type="reset">Cancelar</button>
+                </div>
+
+            </div>
+
+        </div>
+        <script>
+            function previewImagem(event, idPreview) {
+                const input = event.target;
+                const preview = document.getElementById(idPreview);
+
+                if (input.files && input.files[0]) {
+                    const reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        preview.src = e.target.result;
+                        preview.style.display = "block";
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
+        <script>
+            function previewImagem(event, idPreview, idTexto) {
+                const input = event.target;
+                const preview = document.getElementById(idPreview);
+                const texto = document.getElementById(idTexto);
+
+                if (input.files && input.files[0]) {
+                    const reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        preview.src = e.target.result;
+                        preview.style.display = "block";
+                        texto.style.display = "none";
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
+
+    </form>
+    
+
+</div>
