@@ -20,7 +20,10 @@
             <input type="text" placeholder="Buscar título ou autor...">
         </form>
 
-        <a href="/alugarLivro" class="btn-rent">Alugar Livro</a>
+        <div class="topbar-actions">
+            <a href="/alugarLivro" class="btn-rent">Alugar Livro</a>
+            <a href="/devolverLivro" class="btn-return">Devolver Livro</a>
+        </div>
     </header>
 
     <main class="container">
@@ -185,6 +188,11 @@
                 outline: none;
             }
 
+    .topbar-actions {
+        display: flex;
+        gap: 12px;
+    }
+
     .btn-rent {
         background: var(--azul);
         color: var(--card-texto);
@@ -201,6 +209,25 @@
 
         .btn-rent:hover {
             background: #2560C7;
+        }
+
+    .btn-return {
+        background: transparent;
+        color: var(--card-texto);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        font-family: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background .15s ease, border-color .15s ease;
+    }
+
+        .btn-return:hover {
+            background: #171F30;
+            border-color: rgba(255,255,255,0.35);
         }
 
 
