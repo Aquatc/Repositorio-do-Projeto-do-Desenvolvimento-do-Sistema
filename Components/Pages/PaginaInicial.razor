@@ -1,118 +1,113 @@
 ﻿@page "/paginaInicial"
+@page "/"
 
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Estante Azul — Biblioteca</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estante Azul — Biblioteca</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="topbar">
-    <span class="logo">Estante Azul</span>
+    <header class="topbar">
+        <form class="searchbar" onsubmit="return false;">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+                <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <input type="text" placeholder="Buscar título ou autor...">
+        </form>
 
-    <form class="searchbar" onsubmit="return false;">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
-        <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-      </svg>
-      <input type="text" placeholder="Buscar título ou autor...">
-    </form>
-  </header>
+        <a href="/alugarLivro" class="btn-rent">Alugar Livro</a>
+    </header>
 
-  <main class="container">
+    <main class="container">
 
-    <h2 class="group-title">Livros</h2>
-    <div class="grid">
+        <h2 class="group-title">Livros</h2>
+        <div class="grid">
 
-      <article class="book">
-        <div class="cover cover--a">
-          <div class="badges">
-            <span class="date">17.07 SEX</span>
-            <span class="new">NOVO</span>
-          </div>
-          <span class="letter">C</span>
+            <a href="/capitaes-da-areia" class="book">
+                <div class="cover cover--a">
+                    <span class="letter">C</span>
+                </div>
+                <h3>Capitães da Areia</h3>
+                <p class="sub">Jorge Amado</p>
+                <p class="stat"><span class="ok">Disponível</span></p>
+            </a>
+
+            <a href="/revolucao-dos-bichos" class="book">
+                <div class="cover cover--b">
+                    <span class="letter">R</span>
+                </div>
+                <h3>A Revolução dos Bichos</h3>
+                <p class="sub">George Orwell</p>
+                <p class="stat"><span class="ok">Disponível</span></p>
+            </a>
+
+            <a href="/dom-casmurro" class="book">
+                <div class="cover cover--g">
+                    <span class="letter">D</span>
+                </div>
+                <h3>Dom Casmurro</h3>
+                <p class="sub">Machado de Assis</p>
+                <p class="stat"><span class="ok">Disponível</span></p>
+            </a>
+
+            <a href="/vidas-secas" class="book">
+                <div class="cover cover--h">
+                    <span class="letter">V</span>
+                </div>
+                <h3>Vidas Secas</h3>
+                <p class="sub">Graciliano Ramos</p>
+                <p class="stat"><span class="ok">Disponível</span></p>
+            </a>
+
         </div>
-        <h3>Capitães da Areia</h3>
-        <p class="sub">Jorge Amado</p>
-        <p class="stat">#001 · <span class="ok">Disponível</span></p>
-      </article>
 
-      <article class="book">
-        <div class="cover cover--b">
-          <div class="badges">
-            <span class="date">15.07 QUA</span>
-          </div>
-          <span class="letter">R</span>
+        <h2 class="group-title">Mangás</h2>
+        <div class="grid">
+
+            <a href="/sono-bisque" class="book">
+                <div class="cover cover--c">
+                    <span class="letter">祐</span>
+                </div>
+                <h3>Sono Bisque Doll wa Koi wo Suru</h3>
+                <p class="sub">Shinichi Fukuda</p>
+                <p class="stat"><span class="ok">Disponível</span></p>
+            </a>
+
+            <a href="/apotecaria" class="book">
+                <div class="cover cover--d">
+                    <span class="letter">薬</span>
+                </div>
+                <h3>Diários de uma Apotecária</h3>
+                <p class="sub">Natsu Hyuuga</p>
+                <p class="stat"><span class="ok">Disponível</span></p>
+            </a>
+
+            <a href="/tengoku-daimakyou" class="book">
+                <div class="cover cover--e">
+                    <span class="letter">天</span>
+                </div>
+                <h3>Tengoku Daimakyou</h3>
+                <p class="sub">Masakazu Ishiguro</p>
+                <p class="stat"><span class="ok">Disponível</span></p>
+            </a>
+
+            <a href="/dragon-ball" class="book">
+                <div class="cover cover--f">
+                    <span class="letter">悟</span>
+                </div>
+                <h3>Dragon Ball Z</h3>
+                <p class="sub">Akira Toriyama</p>
+                <p class="stat"><span class="ok">Disponível</span></p>
+            </a>
+
         </div>
-        <h3>A Revolução dos Bichos</h3>
-        <p class="sub">George Orwell</p>
-        <p class="stat">#002 · <span class="ok">Disponível</span></p>
-      </article>
 
-    </div>
-
-    <h2 class="group-title">Mangás</h2>
-    <div class="grid">
-
-      <article class="book">
-        <div class="cover cover--c">
-          <div class="badges">
-            <span class="date">17.07 SEX</span>
-            <span class="new">NOVO</span>
-          </div>
-          <span class="letter">祐</span>
-        </div>
-        <h3>Sono Bisque Doll wa Koi wo Suru</h3>
-        <p class="sub">Shinichi Fukuda</p>
-        <p class="stat">#003 · <span class="ok">Disponível</span></p>
-      </article>
-
-      <article class="book">
-        <div class="cover cover--d">
-          <div class="badges">
-            <span class="date">16.07 QUI</span>
-          </div>
-          <span class="letter">薬</span>
-        </div>
-        <h3>Diários de uma Apotecária</h3>
-        <p class="sub">Natsu Hyuuga</p>
-        <p class="stat">#004 · <span class="res">Reservado</span></p>
-      </article>
-
-      <article class="book">
-        <div class="cover cover--e">
-          <div class="badges">
-            <span class="date">14.07 TER</span>
-          </div>
-          <span class="letter">天</span>
-        </div>
-        <h3>Tengoku Daimakyou</h3>
-        <p class="sub">Masakazu Ishiguro</p>
-        <p class="stat">#005 · <span class="ok">Disponível</span></p>
-      </article>
-
-      <article class="book">
-        <div class="cover cover--f">
-          <div class="badges">
-            <span class="date">12.07 DOM</span>
-          </div>
-          <span class="letter">悟</span>
-        </div>
-        <h3>Dragon Ball Z</h3>
-        <p class="sub">Akira Toriyama</p>
-        <p class="stat">#006 · <span class="ok">Disponível</span></p>
-      </article>
-
-    </div>
-
-  </main>
-
-  <footer class="footer">Estante Azul · Projeto de Biblioteca</footer>
+    </main>
 
 </body>
 </html>
@@ -135,7 +130,7 @@
         margin: 0;
         background: var(--fundo);
         color: var(--card-texto);
-        font-family: 'Work Sans', Arial, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     .container {
@@ -144,20 +139,14 @@
         padding: 0 24px 60px;
     }
 
-    /* Topo */
+
     .topbar {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        gap: 24px;
+        gap: 14px;
         padding: 22px 24px;
         border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .logo {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: var(--card-texto);
     }
 
     .searchbar {
@@ -196,7 +185,25 @@
                 outline: none;
             }
 
-    /* Títulos de grupo */
+    .btn-rent {
+        background: var(--azul);
+        color: var(--card-texto);
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        font-family: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background .15s ease;
+    }
+
+        .btn-rent:hover {
+            background: #2560C7;
+        }
+
+
     .group-title {
         font-size: 1.2rem;
         font-weight: 700;
@@ -205,7 +212,7 @@
         border-left: 4px solid var(--azul);
     }
 
-    /* Grade de blocos */
+
     .grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -215,6 +222,9 @@
     .book {
         display: flex;
         flex-direction: column;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
     }
 
     .cover {
@@ -256,25 +266,12 @@
         background: linear-gradient(160deg, #163A6E, #3E71B3);
     }
 
-    .badges {
-        display: flex;
-        gap: 5px;
+    .cover--g {
+        background: linear-gradient(160deg, #1A2F52, #3B6DAF);
     }
 
-    .date {
-        background: rgba(0,0,0,0.45);
-        padding: 3px 7px;
-        border-radius: 4px;
-        font-size: 0.62rem;
-        font-weight: 600;
-    }
-
-    .new {
-        background: #E8622C;
-        padding: 3px 7px;
-        border-radius: 4px;
-        font-size: 0.62rem;
-        font-weight: 700;
+    .cover--h {
+        background: linear-gradient(160deg, #0D2340, #26529A);
     }
 
     .letter {
@@ -310,19 +307,6 @@
     .ok {
         color: #6FCF7E;
         font-weight: 600;
-    }
-
-    .res {
-        color: #F0A860;
-        font-weight: 600;
-    }
-
-    .footer {
-        text-align: center;
-        padding: 20px;
-        font-size: 0.8rem;
-        color: var(--cinza);
-        border-top: 1px solid rgba(255,255,255,0.08);
     }
 
 </style>
