@@ -1,0 +1,218 @@
+ :root {
+        --azul: #2E6FE0;
+        --azul-escuro: #1B3A6B;
+        --fundo: #0B0F18;
+        --card-texto: #F5F8FF;
+        --cinza: rgba(255,255,255,0.45);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background: var(--fundo);
+        color: var(--card-texto);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 24px 60px;
+    }
+
+
+    .topbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 22px 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .searchbar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #171F30;
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 999px;
+        padding: 8px 16px;
+        width: 100%;
+        max-width: 360px;
+    }
+
+        .searchbar svg {
+            width: 16px;
+            height: 16px;
+            color: var(--cinza);
+            flex-shrink: 0;
+        }
+
+        .searchbar input {
+            border: none;
+            background: transparent;
+            color: var(--card-texto);
+            font-family: inherit;
+            font-size: 0.9rem;
+            width: 100%;
+        }
+
+            .searchbar input::placeholder {
+                color: var(--cinza);
+            }
+
+            .searchbar input:focus {
+                outline: none;
+            }
+
+    .topbar-actions {
+        display: flex;
+        gap: 12px;
+    }
+
+    .btn-rent {
+        background: var(--azul);
+        color: var(--card-texto);
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        font-family: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background .15s ease;
+    }
+
+        .btn-rent:hover {
+            background: #2560C7;
+        }
+
+    .btn-return {
+        background: transparent;
+        color: var(--card-texto);
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        font-family: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background .15s ease, border-color .15s ease;
+    }
+
+        .btn-return:hover {
+            background: #171F30;
+            border-color: rgba(255,255,255,0.35);
+        }
+
+
+    .group-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 40px 0 18px;
+        padding-left: 12px;
+        border-left: 4px solid var(--azul);
+    }
+
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px 16px;
+    }
+
+    .book {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+    }
+
+    .cover {
+        position: relative;
+        aspect-ratio: 3 / 4;
+        border-radius: 6px;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: transform .15s ease;
+    }
+
+    .book:hover .cover {
+        transform: translateY(-4px);
+    }
+
+    .cover--a {
+        background: linear-gradient(160deg, #143866, #2A5D9E);
+    }
+
+    .cover--b {
+        background: linear-gradient(160deg, #0F2A4D, #1E4E8C);
+    }
+
+    .cover--c {
+        background: linear-gradient(160deg, #2E5A9C, #6FA3E0);
+    }
+
+    .cover--d {
+        background: linear-gradient(160deg, #1B3A6B, #4A7FC1);
+    }
+
+    .cover--e {
+        background: linear-gradient(160deg, #0E1F3A, #2E5A9C);
+    }
+
+    .cover--f {
+        background: linear-gradient(160deg, #163A6E, #3E71B3);
+    }
+
+    .cover--g {
+        background: linear-gradient(160deg, #1A2F52, #3B6DAF);
+    }
+
+    .cover--h {
+        background: linear-gradient(160deg, #0D2340, #26529A);
+    }
+
+    .letter {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: rgba(255,255,255,0.28);
+    }
+
+    .book h3 {
+        font-size: 0.85rem;
+        margin: 10px 0 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .book .sub {
+        font-size: 0.72rem;
+        color: var(--cinza);
+        margin: 0;
+    }
+
+    .book .stat {
+        font-size: 0.72rem;
+        color: var(--cinza);
+        margin: 4px 0 0;
+    }
+
+    .ok {
+        color: #6FCF7E;
+        font-weight: 600;
+    }

@@ -1,0 +1,136 @@
+:root {
+        --azul: #2E6FE0;
+        --azul-escuro: #1B3A6B;
+        --fundo: #0B0F18;
+        --card-texto: #F5F8FF;
+        --cinza: rgba(255,255,255,0.45);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background: var(--fundo);
+        color: var(--card-texto);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 22px 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .back-link {
+        color: var(--cinza);
+        font-size: 0.85rem;
+        text-decoration: none;
+    }
+
+        .back-link:hover {
+            color: var(--card-texto);
+        }
+
+    .detail-wrapper {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 0 24px 60px;
+    }
+
+    .group-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 40px 0 18px;
+        padding-left: 12px;
+        border-left: 4px solid var(--azul);
+    }
+
+    .detail-card {
+        background: #131A2A;
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 10px;
+        padding: 28px;
+        display: flex;
+        gap: 28px;
+    }
+
+    .detail-cover {
+        width: 180px;
+        aspect-ratio: 3 / 4;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+        .detail-cover .letter {
+            font-size: 3.6rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.28);
+        }
+
+    .cover--e {
+        background: linear-gradient(160deg, #0E1F3A, #2E5A9C);
+    }
+
+    .detail-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .badge-genre {
+        display: inline-block;
+        background: #171F30;
+        border: 1px solid rgba(255,255,255,0.1);
+        color: var(--cinza);
+        font-size: 0.68rem;
+        font-weight: 600;
+        padding: 4px 10px;
+        border-radius: 999px;
+        width: fit-content;
+    }
+
+    .detail-info h1 {
+        font-size: 1.3rem;
+        margin: 4px 0 0;
+        color: var(--card-texto);
+    }
+
+    .detail-info .author {
+        color: var(--cinza);
+        font-size: 0.85rem;
+        margin: 0 0 6px;
+    }
+
+    .synopsis {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        color: rgba(255,255,255,0.75);
+        margin: 0 0 6px;
+    }
+
+    .detail-meta {
+        display: flex;
+        gap: 20px;
+        font-size: 0.75rem;
+        color: var(--cinza);
+        margin-top: 4px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+        .detail-meta strong {
+            color: var(--card-texto);
+            font-weight: 600;
+        }
+
+    .ok {
+        color: #6FCF7E;
+        font-weight: 600;
+    }
