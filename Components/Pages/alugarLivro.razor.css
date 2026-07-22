@@ -1,0 +1,119 @@
+
+    :root {
+        --azul: #2E6FE0;
+        --azul-escuro: #1B3A6B;
+        --fundo: #0B0F18;
+        --card-texto: #F5F8FF;
+        --cinza: rgba(255,255,255,0.45);
+        --card-fundo: #131A2A;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        background: var(--fundo);
+        color: var(--card-texto);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 40px 24px 60px;
+    }
+
+    
+    .group-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: 0 0 18px;
+        padding-left: 12px;
+        border-left: 4px solid var(--azul);
+    }
+
+    
+    .rent-card {
+        background: var(--card-fundo);
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 10px;
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+    }
+
+    .field-row {
+        display: flex;
+        gap: 20px;
+    }
+
+    label {
+        font-size: 0.8rem;
+        color: var(--cinza);
+        font-weight: 600;
+    }
+
+    input,
+    select,
+    textarea {
+        background: #171F30;
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 6px;
+        padding: 10px 12px;
+        color: var(--card-texto);
+        font-family: inherit;
+        font-size: 0.9rem;
+    }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: var(--cinza);
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--azul);
+        }
+
+    textarea {
+        resize: vertical;
+    }
+
+    .status-preview {
+        font-size: 0.85rem;
+    }
+
+    .ok {
+        color: #6FCF7E;
+        font-weight: 600;
+    }
+
+    .btn-confirm {
+        background: var(--azul);
+        color: var(--card-texto);
+        border: none;
+        border-radius: 8px;
+        padding: 12px 20px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        font-family: inherit;
+        cursor: pointer;
+        transition: background .15s ease;
+    }
+
+        .btn-confirm:hover {
+            background: #2560C7;
+        }
+
