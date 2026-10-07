@@ -27,5 +27,13 @@ namespace Biblioteca.Model
         [Required(ErrorMessage = "A situação é obrigatória.")]
         [StringLength(50, ErrorMessage = "A situação deve ter no máximo 50 caracteres.")]
         public string Situacao { get; set; } = "Aberto";
+
     }
+
+
+
+
+
+
+
 }

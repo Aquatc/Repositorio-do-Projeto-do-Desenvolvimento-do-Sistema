@@ -1,7 +1,8 @@
+using Biblioteca.DAO;
 using Bibloteca.Components;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddScoped<ProcessoDAO>();
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
