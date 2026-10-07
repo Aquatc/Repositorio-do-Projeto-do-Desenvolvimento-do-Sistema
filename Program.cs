@@ -1,3 +1,5 @@
+using Biblioteca.Configs;
+using Biblioteca.DAO;
 using Bibloteca.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -5,6 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+// Conexão com o banco de dados MySQL e DAO
+builder.Services.AddScoped<Conexao>();
+builder.Services.AddScoped<ProcessoDAO>();
 
 var app = builder.Build();
 
