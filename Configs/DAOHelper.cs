@@ -6,6 +6,7 @@ using System.Xml.Linq;
 
 namespace Bibloteca.Configs
 {
+
     public class DAOHelper
     {
         // Lê uma string; se a coluna for NULL, devolve str  ing vazia
@@ -38,6 +39,13 @@ namespace Bibloteca.Configs
         {
             return reader.IsDBNull(reader.GetOrdinal(column_name));
         }
-
+        // Lê uma data como DateOnly; se a coluna for NULL, devolve null
+        public static DateOnly? GetDateOnly(MySqlDataReader reader, string column_name)
+        {
+            DateOnly? value = null;
+            if (!reader.IsDBNull(reader.GetOrdinal(column_name)))
+                value = DateOnly.FromDateTime(reader.GetDateTime(column_name));
+            return value;
+        }
     }
 }
